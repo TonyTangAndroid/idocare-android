@@ -31,30 +31,32 @@ dependencies {
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     implementation 'org.greenrobot:eventbus:3.0.0'
     implementation 'com.facebook.android:facebook-android-sdk:4.39.0'
-    implementation 'com.google.android.gms:play-services-location:16.0.0'
-    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    //noinspection GradleDependency
     implementation "androidx.fragment:fragment:${rootProject.ext.androidxFragmentVersion}"
+    //noinspection GradleDependency
     implementation "androidx.appcompat:appcompat:${rootProject.ext.androidxAppcompatVersion}"
-    implementation 'com.google.android.material:material:1.1.0-alpha02'
+    implementation 'com.google.android.material:material:1.1.0-alpha09'
     implementation 'com.makeramen:roundedimageview:2.3.0'
     implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
     // JSON
     implementation 'com.google.code.gson:gson:2.8.5'
     // Networking
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.1'
     // Dependency injection
-    implementation 'com.google.dagger:dagger:2.16'
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.16'
+    implementation 'com.google.dagger:dagger:2.24'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.24'
     // Testing
     testImplementation 'junit:junit:4.12'
-    testImplementation 'org.mockito:mockito-core:2.19.0'
+    testImplementation 'org.mockito:mockito-core:2.23.4'
     // Crash report
-    implementation 'com.google.firebase:firebase-core:16.0.6'
+    implementation 'com.google.firebase:firebase-core:17.1.0'
     implementation 'com.google.firebase:firebase-crash:16.2.1'
     // Datetime library
-    implementation 'joda-time:joda-time:2.9.4'
+    implementation 'joda-time:joda-time:2.10.1'
 
-    implementation "com.techyourchance.threadposter:threadposter:0.8.1"
+    implementation "com.techyourchance.threadposter:threadposter:0.8.2"
 }
