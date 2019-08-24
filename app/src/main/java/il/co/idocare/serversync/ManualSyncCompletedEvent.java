@@ -1,4 +1,4 @@
-package il.co.idocarecore.serversync;
+package il.co.idocare.serversync;
 
 /**
  * This event will be posted to EventBus upon completion of a manual sync

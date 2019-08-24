@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.provider.BaseColumns;
 
 import il.co.idocarecore.Constants;
-import il.co.idocarecore.Constants;
 
 /**
  * Contract class for our ContentProvider
@@ -15,7 +14,7 @@ public class IDoCareContract {
 	/**
 	 * The authority of the requests provider.
 	 */
-	public static final String AUTHORITY = "il.co.idocare.provider.IDoCareContentProvider";
+	public static final String AUTHORITY = "il.co.idocare.contentproviders.IDoCareContentProvider";
 
 	/**
 	 * The content URI for the top-level authority.

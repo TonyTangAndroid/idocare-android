@@ -1,6 +1,4 @@
-package il.co.idocarecore.serversync.syncers;
-
-import androidx.annotation.WorkerThread;
+package il.co.idocare.serversync.syncers;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -8,12 +6,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import androidx.annotation.WorkerThread;
+import il.co.idocare.serversync.SyncFailedException;
 import il.co.idocarecore.Constants;
 import il.co.idocarecore.authentication.LoginStateManager;
 import il.co.idocarecore.networking.ServerApi;
 import il.co.idocarecore.networking.schemes.responses.GetUsersInfoResponseScheme;
 import il.co.idocarecore.networking.schemes.responses.UserInfoScheme;
-import il.co.idocarecore.serversync.SyncFailedException;
 import il.co.idocarecore.users.UserEntity;
 import il.co.idocarecore.users.UsersCacher;
 import il.co.idocarecore.users.UsersRetriever;

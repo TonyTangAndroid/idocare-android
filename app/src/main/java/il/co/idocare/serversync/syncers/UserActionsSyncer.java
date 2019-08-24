@@ -1,9 +1,7 @@
-package il.co.idocarecore.serversync.syncers;
+package il.co.idocare.serversync.syncers;
 
 
 import android.content.ContentResolver;
-import androidx.annotation.Nullable;
-import androidx.annotation.WorkerThread;
 
 import com.techyourchance.threadposter.BackgroundThreadPoster;
 
@@ -17,13 +15,15 @@ import java.util.ListIterator;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import androidx.annotation.Nullable;
+import androidx.annotation.WorkerThread;
+import il.co.idocare.serversync.SyncFailedException;
 import il.co.idocarecore.Constants;
 import il.co.idocarecore.contentproviders.IDoCareContract;
 import il.co.idocarecore.networking.HttpUtils;
 import il.co.idocarecore.networking.NetworkingUtils;
 import il.co.idocarecore.networking.ServerApi;
 import il.co.idocarecore.requests.retrievers.TempIdRetriever;
-import il.co.idocarecore.serversync.SyncFailedException;
 import il.co.idocarecore.useractions.cachers.UserActionCacher;
 import il.co.idocarecore.useractions.entities.CloseRequestUserActionEntity;
 import il.co.idocarecore.useractions.entities.PickUpRequestUserActionEntity;

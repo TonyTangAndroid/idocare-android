@@ -7,13 +7,14 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
-import androidx.annotation.Nullable;
-import androidx.core.content.FileProvider;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+
+import androidx.annotation.Nullable;
+import androidx.core.content.FileProvider;
 
 /**
  * This class handles interactions with device camera
@@ -48,7 +49,7 @@ public class CameraAdapter {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             cameraPictureUri = FileProvider.getUriForFile(
                     mActivity,
-                    "il.co.idocarecore.provider",
+                    "il.co.idocare.provider",
                     outputFile);
         } else {
             cameraPictureUri = Uri.fromFile(outputFile);

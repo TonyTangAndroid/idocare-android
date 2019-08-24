@@ -6,19 +6,17 @@ import android.content.ContentProviderClient;
 import android.content.Context;
 import android.content.SyncResult;
 import android.os.Bundle;
-import androidx.annotation.NonNull;
 import android.util.Log;
 
 import org.greenrobot.eventbus.EventBus;
 
 import javax.inject.Inject;
 
+import androidx.annotation.NonNull;
+import il.co.idocare.serversync.syncers.RequestsSyncer;
+import il.co.idocare.serversync.syncers.UserActionsSyncer;
+import il.co.idocare.serversync.syncers.UsersSyncer;
 import il.co.idocarecore.authentication.LoginStateManager;
-import il.co.idocarecore.serversync.ManualSyncCompletedEvent;
-import il.co.idocarecore.serversync.SyncFailedException;
-import il.co.idocarecore.serversync.syncers.RequestsSyncer;
-import il.co.idocarecore.serversync.syncers.UserActionsSyncer;
-import il.co.idocarecore.serversync.syncers.UsersSyncer;
 import il.co.idocarecore.utils.Logger;
 
 /**
@@ -41,9 +39,12 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
      */
     public static final String SYNC_EXTRAS_MANUAL_SYNC_ID = "SYNC_EXTRAS_MANUAL_SYNC_ID";
 
-    @Inject RequestsSyncer mRequestsSyncer;
-    @Inject UserActionsSyncer mUserActionsSyncer;
-    @Inject UsersSyncer mUsersSyncer;
+    @Inject
+    RequestsSyncer mRequestsSyncer;
+    @Inject
+    UserActionsSyncer mUserActionsSyncer;
+    @Inject
+    UsersSyncer mUsersSyncer;
 
     @Inject LoginStateManager mLoginStateManager;
     @Inject EventBus mEventBus;

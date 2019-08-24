@@ -1,7 +1,4 @@
-package il.co.idocarecore.serversync.syncers;
-
-import androidx.annotation.Nullable;
-import androidx.annotation.WorkerThread;
+package il.co.idocare.serversync.syncers;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -11,21 +8,23 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
+import androidx.annotation.Nullable;
+import androidx.annotation.WorkerThread;
+import il.co.idocare.location.ReverseGeocoder;
+import il.co.idocare.serversync.SyncFailedException;
 import il.co.idocarecore.Constants;
 import il.co.idocarecore.contentproviders.TransactionsController;
-import il.co.idocare.location.ReverseGeocoder;
 import il.co.idocarecore.networking.NetworkingUtils;
 import il.co.idocarecore.networking.ServerApi;
 import il.co.idocarecore.networking.schemes.responses.RequestResponseScheme;
-import il.co.idocarecore.networking.schemes.responses.RequestsResponseScheme;
 import il.co.idocarecore.networking.schemes.responses.RequestScheme;
+import il.co.idocarecore.networking.schemes.responses.RequestsResponseScheme;
 import il.co.idocarecore.requests.RequestEntity;
-import il.co.idocarecore.requests.events.RequestIdChangedEvent;
-import il.co.idocarecore.requests.events.RequestsChangedEvent;
 import il.co.idocarecore.requests.cachers.RequestsCacher;
 import il.co.idocarecore.requests.cachers.TempIdCacher;
+import il.co.idocarecore.requests.events.RequestIdChangedEvent;
+import il.co.idocarecore.requests.events.RequestsChangedEvent;
 import il.co.idocarecore.requests.retrievers.RawRequestRetriever;
-import il.co.idocarecore.serversync.SyncFailedException;
 import il.co.idocarecore.utils.Logger;
 import okhttp3.MultipartBody;
 import retrofit2.Call;

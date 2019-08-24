@@ -1,6 +1,7 @@
 package il.co.idocarecore.users;
 
-import com.techyourchance.threadposter.ThreadPostersTestDouble;
+
+import com.techyourchance.threadposter.testdoubles.ThreadPostersTestDouble;
 
 import org.junit.Before;
 import org.junit.Test;
