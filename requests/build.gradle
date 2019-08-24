@@ -24,6 +24,7 @@ dependencies {
     implementation project(path: ':core')
 
     implementation 'javax.inject:javax.inject:1'
+    implementation "androidx.fragment:fragment:${rootProject.ext.androidxFragmentVersion}"
     implementation "androidx.appcompat:appcompat:${rootProject.ext.androidxAppcompatVersion}"
     implementation 'com.google.android.gms:play-services-location:16.0.0'
     implementation 'com.google.android.gms:play-services-maps:16.0.0'

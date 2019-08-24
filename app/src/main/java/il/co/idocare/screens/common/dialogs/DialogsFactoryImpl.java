@@ -7,7 +7,6 @@ import android.os.Bundle;
 import javax.inject.Inject;
 
 import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentFactory;
 import il.co.idocarecore.screens.common.dialogs.DialogsFactory;
 import il.co.idocarecore.screens.common.dialogs.InfoDialog;
@@ -38,7 +37,9 @@ public class DialogsFactoryImpl implements DialogsFactory {
         args.putString(InfoDialog.ARG_MESSAGE, message);
         args.putString(InfoDialog.ARG_BUTTON_CAPTION, buttonCaption);
 
-        return (DialogFragment) mFragmentFactory.instantiate(mActivity.getClassLoader(), InfoDialog.class.getName(), args);
+        DialogFragment dialogFragment = (DialogFragment) mFragmentFactory.instantiate(mActivity.getClassLoader(), InfoDialog.class.getName());
+        dialogFragment.setArguments(args);
+        return dialogFragment;
     }
 
     /**
@@ -57,7 +58,9 @@ public class DialogsFactoryImpl implements DialogsFactory {
         args.putString(PromptDialog.ARG_POSITIVE_BUTTON_CAPTION, positiveButtonCaption);
         args.putString(PromptDialog.ARG_NEGATIVE_BUTTON_CAPTION, negativeButtonCaption);
 
-        return (DialogFragment) mFragmentFactory.instantiate(mActivity.getClassLoader(), PromptDialog.class.getName(), args);
+        DialogFragment dialogFragment = (DialogFragment) mFragmentFactory.instantiate(mActivity.getClassLoader(), PromptDialog.class.getName());
+        dialogFragment.setArguments(args);
+        return dialogFragment;
     }
 
 }

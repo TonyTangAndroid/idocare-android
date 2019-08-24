@@ -1,12 +1,9 @@
 package il.co.idocare.screens.common.fragments;
 
-import android.os.Bundle;
-
 import javax.inject.Inject;
 import javax.inject.Provider;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentFactory;
 import il.co.idocarecore.screens.common.dialogs.InfoDialog;
@@ -47,7 +44,7 @@ public class FragmentFactoryImpl extends FragmentFactory {
 
     @NonNull
     @Override
-    public Fragment instantiate(@NonNull ClassLoader classLoader, @NonNull String className, @Nullable Bundle args) {
+    public Fragment instantiate(@NonNull ClassLoader classLoader, @NonNull String className) {
         Class clazz = loadFragmentClass(classLoader, className);
 
         Fragment fragment = null;
@@ -73,11 +70,7 @@ public class FragmentFactoryImpl extends FragmentFactory {
             fragment = mPromptDialogProvider.get();
         }
         else {
-            return super.instantiate(classLoader, className, args);
-        }
-
-        if (args != null) {
-            fragment.setArguments(args);
+            return super.instantiate(classLoader, className);
         }
 
         return fragment;
