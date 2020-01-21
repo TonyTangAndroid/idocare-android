@@ -39,6 +39,7 @@ android {
 }
 
 dependencies {
+    implementation project(path: ':resources')
     implementation project(path: ':core')
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
@@ -46,11 +47,6 @@ dependencies {
     implementation 'com.facebook.android:facebook-android-sdk:4.39.0'
     implementation 'com.google.android.gms:play-services-location:17.0.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
-    //noinspection GradleDependency
-    implementation "androidx.fragment:fragment:${rootProject.ext.androidxFragmentVersion}"
-    //noinspection GradleDependency
-    implementation "androidx.appcompat:appcompat:${rootProject.ext.androidxAppcompatVersion}"
-    implementation 'com.google.android.material:material:1.1.0-alpha09'
     implementation 'com.makeramen:roundedimageview:2.3.0'
     implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
     // JSON
@@ -63,7 +59,7 @@ dependencies {
     implementation 'com.google.dagger:dagger:2.24'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.24'
     // Testing
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13'
     testImplementation 'org.mockito:mockito-core:2.23.4'
     // Crash report
     implementation 'com.google.firebase:firebase-core:17.1.0'
