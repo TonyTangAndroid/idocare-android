@@ -24,8 +24,7 @@ Thumbs.db
 # Android Studio
 .idea
 .gradle
-build/*
-app/build/
+build
 *.iml
 
 # Emacs backups
